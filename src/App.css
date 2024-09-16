@@ -1,80 +1,133 @@
+/* --- Global Styles --- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+  height: 100%; /* Ensure the body and HTML fill the screen */
+}
+
 .App {
   text-align: center;
-  background-color: #FFFFFF; /* Neutral white background */
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ensure content stretches to fill available space */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CustomHR {
+background-color: #A0522D;
+
 }
 
-.App-header {
-  background-color: #8B4513; /* Warm brown top bar */
-  min-height: 100vh;
+main {
+  flex: 1; /* This ensures the main content takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add some padding to give content breathing space */
+}
+
+.HomePageGrid {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #FFFFFF; /* White text for contrast */
+  flex: 1;
+  padding: 5px; /* Reduce padding if needed */
 }
 
-.App-link {
-  color: #A0522D; /* Sienna for links */
+.hero-text {
+  font-size: 5vw;
+  color: #333;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-text h1 {
+  font-size: 5vw;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+.hero-text p {
+  font-size: 2.5vw;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  background-color: #A0522D;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: #8B4513;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* --- Footer Styles --- */
+.Footer {
+  background-color: #A0522D;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 50px;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+/* --- Testimonials Section (Home.js) --- */
+.testimonials-section {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.testimonial {
+  background-color: #FFF8DC;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* --- Navigation Styles (NavBar.js) --- */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  padding: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #A0522D; /* Sienna for nav links */
-}
-
-nav ul li a:hover {
-  color: #FFFFFF; /* White on hover */
-}
-
-/* Style the header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #8B4513; /* Warm brown top bar */
-}
-
-/* Shrink and position the logo */
-header img {
-  height: 50px; /* Adjust the height of the logo */
-  margin-right: 20px;
-}
-
-/* Style the navigation */
-nav ul {
-  list-style: none;
-  display: flex;
+  padding: 10px;
   margin: 0;
-  padding: 0;
+  background-color: white; /* Sienna top bar */
 }
 
 nav ul li {
@@ -83,45 +136,22 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #A0522D; /* Sienna for nav links */
+  color:black;
   font-size: 18px;
+  transition: color 0.1s, border-bottom 0.1s;
 }
 
 nav ul li a:hover {
-  color: white;
-  border-bottom: 2px solid white; /* Adds an underline effect */
+  color: #A0522D; /* Golden color on hover */
+  border-bottom: 2px solid #A0522D; /* Golden underline effect */
 }
 
-button {
-  background-color: #8B4513; /* Warm brown buttons */
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #A0522D; /* Slightly lighter brown on hover */
-}
-
-/* Hover effect for links */
-nav ul li a {
-  transition: color 0.3s, border-bottom 0.3s;
-}
-
-
-
-
-/* Style for social media bar */
-.navBar {
+/* --- Social Media Bar Styles (SocialMediaBar.js) --- */
+.social-media-bar {
   display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 25px;
-  padding: 5px 20px;
-  background-color: #8B4513; /* Warm brown background */
-  color: white;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background-color: #A0522D;
 }
 
 .socialIcons {
@@ -129,89 +159,79 @@ nav ul li a {
   gap: 15px; /* Space between icons */
 }
 
-.iconLink {
-  text-decoration: none; /* Remove underline */
-}
-
 .iconStyle {
-  width: 24px; /* Adjust icon size */
+  width: 24px;
   height: 24px;
   filter: brightness(0) invert(1); /* Makes icons white for contrast */
 }
 
-/* Default (inactive) NavLink styling */
-.inactive-link {
-  color: #61dafb; /* React blue */
-  border-bottom: 2px solid transparent;
-  padding-bottom: 5px;
-  text-decoration: none;
-  transition: color 0.3s, border-bottom 0.3s;
+/* --- Desktop Layout (Min-width 768px) --- */
+@media (min-width: 768px) {
+  .HomePageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns for text, image, and testimonials */
+    gap: 10px;
+    padding: 0px;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    text-align: left;
+    font-size: 3vw;
+  }
+
+  .hero-image {
+    grid-column: 2 / 3;
+  }
+
+  .testimonials-section {
+    grid-column: 3 / 4;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    justify-content: flex-start; /* Align to the left */
+    gap: 40px; /* Add space between items */
+  }
+
 }
 
-/* Active NavLink styling */
-.active-link {
-  color: white;
-  border-bottom: 2px solid white;
-  padding-bottom: 5px;
-  text-decoration: none;
+
+
+/* --- Mobile Layout (Max-width 768px) --- */
+@media (max-width: 768px) {
+  .HomePageGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text {
+    font-size: 5vw;
+  }
+
+  .hero-image {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .testimonials-section {
+    order: 3;
+    margin-top: 20px;
+  }
+  nav ul {
+    justify-content: space-around; /* Spread out evenly on mobile */
+  }
+  
+  /* For mobile */
+  nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+
 }
-
-/* Add hover effect if you want */
-.inactive-link:hover {
-  color: white;
-  border-bottom: 2px solid white;
-}
-
-
-/* src/ProductPage.css */
-.product-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.product-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.photo-gallery {
-  display: flex;
-  gap: 10px;
-}
-
-.photo-gallery img {
-  max-width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.product-info {
-  margin-top: 20px;
-}
-
-.checkout-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #0070ba;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.checkout-button:hover {
-  background-color: #005a9e;
-}
-/* src/Product.css */
-
-.product-page {
-text-align: center; /* Center text and inline elements */
-}
-
-#paypal-button-container {
-display: inline-block; /* Ensure it's treated as an inline element */
-margin-top: 20px; /* Optional margin */
-}
-

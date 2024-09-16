@@ -1,5 +1,13 @@
+import React from 'react';
+import '../App.css';
+import useDeviceType from '../useDeviceType.js';
+
 const Home = () => {
-    return <h1>Welcome to the Contact Page!</h1>;
+  const deviceType = useDeviceType();  // Get device type ('Mobile' or 'Desktop')
+ 
+  return (
+    <div> <h1>Welcome to the Contact Page! {deviceType} </h1></div>
+    )
   };
   
   export default Home;

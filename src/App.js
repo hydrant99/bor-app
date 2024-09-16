@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -33,29 +32,34 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/Product';
-import SocialMediaBar from './components/SocialMediaBar' ;
+import SocialMediaBar from './components/SocialMediaBar';
+import Footer from './components/footer.js';
 
 function App() {
   return (
-    <div className="App">
-       <SocialMediaBar />
-        <Router>
-        <header>
-        <a href= "https://theboxofrocks.com"><img src={logo} alt="Home" /></a>
-      <NavBar />
-      </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div className="App">  {/* JF Note: App starts here, then compiles component .js file as they are called or html objects */}
+      <Router>
+        {/* Header for NavBar */}
+        <header> 
+        <div className="social-media-bar">
+            <SocialMediaBar />
+        </div>
+        <NavBar />
+       </header>
+
+        {/* Main Routes */}
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </Router>
+      <div ><Footer /></div>
     
     </div>
-
-
-
   );
 }
 

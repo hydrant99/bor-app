@@ -10,12 +10,25 @@ const ProductPage = () => {
       <h1>The Box of Rocks</h1>
       <div className="product-details">
         <div className="photo-gallery">
-          <img src={Product1} alt="Box of Rocks" />
-          <img src={Product2} alt="Box of Rocks" />
+         {/*<img src={Product1} alt="Box of Rocks" />  */}
+         {/* <img src={Product2} alt="Box of Rocks" /> */}
         </div>
         <div className="product-info">
           <p><strong>Price:</strong> $12.99</p>
-          <p><strong>Details:</strong> This box contains an assortment of beautiful rocks. Perfect for collectors and nature enthusiasts!</p>
+          <p><strong>Details:</strong> Send a box of rocks to any address in the USA and spread some unexpected fun!
+
+                Each box contains one pound of river rocks, perfect for surprising friends, family, or colleagues.  
+
+                Each box comes with 4 card options.  Adhere the blank card to fill out your own custom message, or use one of the other card options as you see fit!
+
+
+                Please note: Due to the surprise nature of this product, refunds/returns are not allowed after the product has shipped.
+
+                Product Dimensions:
+                Box Size: 4in x 4in x 2in 
+                Packaged Weight: 16 oz. 
+                Add a touch of spontaneity to someone's day with a Box of Rocks!</p>
+        
         </div>
       </div>
       <div className="paypal-button-container">

@@ -1,3 +1,5 @@
+This is my first react.js project!  It is a simple single product website where I can sell a silly product I made.  I have about 100 in the basement that I can actually sell if anyone orders them lol.  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

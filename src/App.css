@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #FFFFFF; /* Neutral white background */
 }
 
 .App-logo {
@@ -14,18 +15,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #8B4513; /* Warm brown top bar */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFFFF; /* White text for contrast */
 }
 
 .App-link {
-  color: #61dafb;
+  color: #A0522D; /* Sienna for links */
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +37,181 @@
     transform: rotate(360deg);
   }
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #A0522D; /* Sienna for nav links */
+}
+
+nav ul li a:hover {
+  color: #FFFFFF; /* White on hover */
+}
+
+/* Style the header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #8B4513; /* Warm brown top bar */
+}
+
+/* Shrink and position the logo */
+header img {
+  height: 50px; /* Adjust the height of the logo */
+  margin-right: 20px;
+}
+
+/* Style the navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #A0522D; /* Sienna for nav links */
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: white;
+  border-bottom: 2px solid white; /* Adds an underline effect */
+}
+
+button {
+  background-color: #8B4513; /* Warm brown buttons */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #A0522D; /* Slightly lighter brown on hover */
+}
+
+/* Hover effect for links */
+nav ul li a {
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+
+
+
+/* Style for social media bar */
+.navBar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 25px;
+  padding: 5px 20px;
+  background-color: #8B4513; /* Warm brown background */
+  color: white;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.iconLink {
+  text-decoration: none; /* Remove underline */
+}
+
+.iconStyle {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  filter: brightness(0) invert(1); /* Makes icons white for contrast */
+}
+
+/* Default (inactive) NavLink styling */
+.inactive-link {
+  color: #61dafb; /* React blue */
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Active NavLink styling */
+.active-link {
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+/* Add hover effect if you want */
+.inactive-link:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+
+/* src/ProductPage.css */
+.product-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.photo-gallery img {
+  max-width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.product-info {
+  margin-top: 20px;
+}
+
+.checkout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background-color: #005a9e;
+}
+/* src/Product.css */
+
+.product-page {
+text-align: center; /* Center text and inline elements */
+}
+
+#paypal-button-container {
+display: inline-block; /* Ensure it's treated as an inline element */
+margin-top: 20px; /* Optional margin */
+}
+

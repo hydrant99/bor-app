@@ -1,4 +1,3 @@
-
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -9,18 +8,33 @@ import Contact from './pages/Contact';
 import Product from './pages/Product';
 import SocialMediaBar from './components/SocialMediaBar';
 import Footer from './components/footer.js';
+import { Helmet } from 'react-helmet';  // Import Helmet
 
 function App() {
   return (
-    <div className="App">  {/* JF Note: App starts here, then compiles component .js file as they are called or html objects */}
+    <div className="App">  
+      {/* JF Note: App starts here, then compiles component .js files as they are called or HTML objects */}
+      <Helmet>
+        {/* Google Analytics Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ0BQZHDFE"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LQ0BQZHDFE');
+          `}
+        </script>
+      </Helmet>
+
       <Router>
         {/* Header for NavBar */}
         <header> 
-        <div className="social-media-bar">
+          <div className="social-media-bar">
             <SocialMediaBar />
-        </div>
-        <NavBar />
-       </header>
+          </div>
+          <NavBar />
+        </header>
 
         {/* Main Routes */}
         <main>
@@ -32,8 +46,9 @@ function App() {
           </Routes>
         </main>
       </Router>
-      <div ><Footer /></div>
-    
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

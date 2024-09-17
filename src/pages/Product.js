@@ -1,7 +1,5 @@
 import React from 'react';
 import '../App.css';
-import Product1 from '../images/BOR_Ticket-12.png';
-import Product2 from '../images/ProductImagesv4-2.png';
 
 
 const ProductPage = () => {

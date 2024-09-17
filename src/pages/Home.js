@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';  // For navigation between pages
 import heropic1 from '../images/IMG_2951.jpg';
 import '../App.css';
-import useDeviceType from '../useDeviceType.js';
+
 
 const Home = () => {
-  const deviceType = useDeviceType();  // Get device type ('Mobile' or 'Desktop')
+ 
   
   return (
     <div className="HomePageGrid">

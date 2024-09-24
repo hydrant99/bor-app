@@ -2,6 +2,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  
   font-family: Arial, sans-serif;
   background-color: #FFFFFF;
   color: #333;
@@ -16,7 +17,6 @@ body, html {
   min-height: 100vh; /* Full height of the viewport */
 }
 
-/* Ensure content stretches to fill available space */
 header {
   display: flex;
   flex-direction: column;
@@ -24,8 +24,7 @@ header {
 }
 
 .CustomHR {
-background-color: #A0522D;
-
+  background-color: #A0522D;
 }
 
 main {
@@ -33,7 +32,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
-  padding: 20px; /* Add some padding to give content breathing space */
+  padding: 0 20px 20px 20px; /* Add some padding to give content breathing space */
 }
 
 .HomePageGrid {
@@ -42,7 +41,7 @@ main {
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 5px; /* Reduce padding if needed */
+  padding: 5px;
 }
 
 .hero-text {
@@ -79,7 +78,6 @@ main {
 .hero-image img {
   width: 100%;
   max-width: 400px;
-
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -127,7 +125,7 @@ nav ul {
   justify-content: space-around;
   padding: 10px;
   margin: 0;
-  background-color: white; /* Sienna top bar */
+  background-color: white;
 }
 
 nav ul li {
@@ -136,14 +134,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color:black;
+  color: black;
   font-size: 18px;
   transition: color 0.1s, border-bottom 0.1s;
 }
 
 nav ul li a:hover {
-  color: #A0522D; /* Golden color on hover */
-  border-bottom: 2px solid #A0522D; /* Golden underline effect */
+  color: #A0522D;
+  border-bottom: 2px solid #A0522D;
 }
 
 /* --- Social Media Bar Styles (SocialMediaBar.js) --- */
@@ -156,7 +154,7 @@ nav ul li a:hover {
 
 .socialIcons {
   display: flex;
-  gap: 15px; /* Space between icons */
+  gap: 15px;
 }
 
 .iconStyle {
@@ -165,11 +163,223 @@ nav ul li a:hover {
   filter: brightness(0) invert(1); /* Makes icons white for contrast */
 }
 
-/* --- Desktop Layout (Min-width 768px) --- */
+/* --- Product Page Styles --- */
+
+/* Product container layout */
+.product-container {
+  display: flex;
+  flex-direction: column; /* Mobile: stack items vertically */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of elements */
+  
+  padding: 5px; /* Padding inside the container */
+}
+
+/* Image and Video Gallery styling */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box; /* Ensure padding is included in the size */
+}
+
+/* Main image and video container */
+.main-image img, .video-container video {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  max-width: 400px; /* Ensure the image/video doesn't exceed container width */
+  max-height: 400px; /* Ensure the image/video doesn't exceed container height */
+  object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding/borders in the element’s size */
+}
+
+/* Thumbnail gallery styling */
+.thumbnail-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+/* Thumbnails for images and videos */
+.thumbnail, .video-thumbnail {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover, .video-thumbnail:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Product details section */
+.product-details {
+  padding: 0px;
+  max-width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; /* Prevent overflow issues due to padding */
+}
+
+/* Price display */
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* PayPal button styling */
+.paypal-button {
+  align-items: center;
+  margin-top: 15px;
+}
+/* Product description */
+.description {
+  margin-top: 0px;
+}
+
+.about-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.main-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.main-image {
+  flex: 1;
+  padding: 20px;
+  text-align: right;
+}
+
+.main-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* New How It Works Section */
+.howitworks {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.howitworks-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9; /* Background color for distinction */
+  border-radius: 8px;
+}
+
+.howitworks-item img {
+  max-width: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.howitworks-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.howitworks-item p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-text, .main-image {
+    flex: none;
+    padding: 0;
+  }
+
+  .howitworks {
+    flex-direction: column;
+  }
+
+  .howitworks-item {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* --- Media Query for Mobile --- */
+
+/* Mobile layout adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+
+  .product-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items */
+    justify-content: center;
+  }
+
+  /* Ensure the image gallery takes full width on mobile */
+  .image-gallery {
+    width: 100%; /* Full width */
+    margin-top: 0; /* Remove any extra margin at the top */
+    max-width: 100%; /* Make sure it doesn't overflow */
+    height: auto; /* Adjust height automatically for content */
+  }
+
+  .main-image img, .video-container video {
+    width: 100%; /* Ensure image/video fits the container */
+    max-width: 100%; /* Prevent overflow */
+    height: auto; /* Adjust height based on content */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+
+  /* Ensure product details also take full width on mobile */
+  .product-details {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Prevent overflow */
+    margin-top: 20px; /* Add some space between the gallery and details */
+    padding: 10px; /* Add padding for a better mobile experience */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .price {
+    font-size: 20px; /* Reduce font size for mobile */
+  }
+
+  .description {
+    font-size: 16px; /* Reduce font size for mobile readability */
+    text-align: left;
+    
+  }
+}
+
+/* --- Desktop-specific media query --- */
+
+/* Desktop layout adjustments for screens larger than 768px */
 @media (min-width: 768px) {
   .HomePageGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns for text, image, and testimonials */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     padding: 0px;
     align-items: flex-start;
@@ -192,46 +402,75 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
   }
+
   nav ul {
-    justify-content: flex-start; /* Align to the left */
-    gap: 40px; /* Add space between items */
+    justify-content: flex-start;
+    gap: 40px;
   }
 
+.product-container {
+  display: flex;
+  flex-direction: row; /* Align the image gallery and details side by side */
+  align-items: flex-start; /* Align everything to the top */
+  justify-content: center;
+  margin: 0; /* Remove any unwanted margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Ensure padding and border are included in the size */
 }
 
+.image-gallery {
+  flex: 1;
+  max-width: 400px;
+  min-height: 400px;
+  margin: 0; /* Ensure no extra margin */
+  padding: 0; /* Ensure no extra padding */
+  box-sizing: border-box;
+}
 
+.product-details {
+  flex: 1;
+  max-width: 500px;
+  padding-left: 20px; /* Space between gallery and details */
+  margin: 0; /* Ensure no top margin */
+  padding-top: 0; /* Remove any padding on top */
+  box-sizing: border-box;
+}
 
-/* --- Mobile Layout (Max-width 768px) --- */
-@media (max-width: 768px) {
-  .HomePageGrid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+}
+.contact-page {
+  padding: 20px;
+  text-align: center;
+}
 
-  .hero-text {
-    font-size: 5vw;
-  }
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-  .hero-image {
-    order: 2;
-    margin-top: 20px;
-  }
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
 
-  .testimonials-section {
-    order: 3;
-    margin-top: 20px;
-  }
-  nav ul {
-    justify-content: space-around; /* Spread out evenly on mobile */
-  }
-  
-  /* For mobile */
-  nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s, border-bottom 0.3s;
-  }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
 }

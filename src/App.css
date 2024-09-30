@@ -50,16 +50,72 @@ nav ul li a:hover {
 /* --------------------------------------------------- */
 /* ------------ Social Media Bar Styles --------------- */
 /* --------------------------------------------------- */
-.social-media-bar {
+
+.navBar {
   display: flex;
-  justify-content: flex-start;
-  padding: 10px 20px;
+  justify-content: space-between; /* Separates social icons and waffle */
+  align-items: center;
+  padding: 0 20px; /* Adds padding on both sides */
+  background-color: #A0522D; /* Brown background */
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* Space between social icons */
+  margin-right: auto; /* Push social icons to the left */
+}
+
+.waffleContainer {
+  display: flex;
+  justify-content: flex-end; /* Pushes the waffle icon to the right */
+}
+
+.waffle-icon {
+  font-size: 45px;
+  filter: brightness(0) invert(1); /* White for contrast */
+  cursor: pointer;
+  margin-left: 20px; /* Adds a little space between the icons and the waffle */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: block;
+}
+
+.dropdown-menu ul li a:hover {
   background-color: #A0522D;
+  color: white;
+  border-radius: 4px;
 }
 
 .socialIcons {
   display: flex;
   gap: 15px;
+  flex-grow: 1;
 }
 
 .iconStyle {
@@ -166,6 +222,7 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 .main-image {
+
   border-radius: 10px;
 }
 

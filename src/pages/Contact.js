@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ButtonMailto from '../components/ButtonMailto.js';  // Import the ButtonMailto component
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,6 +34,8 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <h1>Contact Us</h1>
+      {/* Add the message under Contact Us */}
+      <p>Thanks for checking us out - if you have any questions, let us know.</p>
       <form className="contact-form">
         <label htmlFor="name">Name:</label>
         <input 
@@ -65,8 +66,12 @@ const Contact = () => {
           required 
         />
 
-        {/* Use the ButtonMailto component and pass the decoded mailto link */}
-        <ButtonMailto mailto={generateMailtoLink()} label="Send Email" />
+        <button 
+          type="button" 
+          className="submit-button" 
+          onClick={() => window.location.href = generateMailtoLink()}>
+          Send Email
+        </button>
       </form>
     </div>
   );

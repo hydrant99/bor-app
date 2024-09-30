@@ -57,7 +57,9 @@ const ProductPage = () => {
           ))}
         </div>
       </div>
+      
       <div className="product-details">
+      <hr />
         <h2>The Box of Rocks</h2>
         <p className="price">$12.99</p>
         <div className="paypal-button-container">

@@ -1,12 +1,13 @@
-/* --- Global Styles --- */
+/* --------------------------------------------------- */
+/* ----------------- Global Styles ------------------- */
+/* --------------------------------------------------- */
 body, html {
   margin: 0;
   padding: 0;
-  
   font-family: Arial, sans-serif;
   background-color: #FFFFFF;
   color: #333;
-  height: 100%; /* Ensure the body and HTML fill the screen */
+  height: 100%;
 }
 
 .App {
@@ -14,111 +15,12 @@ body, html {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full height of the viewport */
+  min-height: 100vh;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.CustomHR {
-  background-color: #A0522D;
-}
-
-main {
-  flex: 1; /* This ensures the main content takes up remaining space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  padding: 0 20px 20px 20px; /* Add some padding to give content breathing space */
-}
-
-.HomePageGrid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  padding: 5px;
-}
-
-.hero-text {
-  font-size: 5vw;
-  color: #333;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 5vw;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 2.5vw;
-}
-
-.hero-text button {
-  padding: 12px 24px;
-  background-color: #A0522D;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1.5vw;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.hero-text button:hover {
-  background-color: #8B4513;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-/* --- Footer Styles --- */
-.Footer {
-  background-color: #A0522D;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  height: 50px;
-  margin-top: auto; /* Push footer to the bottom */
-}
-
-/* --- Testimonials Section (Home.js) --- */
-.testimonials-section {
-  text-align: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  padding: 20px;
-}
-
-.testimonial {
-  background-color: #FFF8DC;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.testimonial p {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-/* --- Navigation Styles (NavBar.js) --- */
+/* --------------------------------------------------- */
+/* ---------------- NavBar.js Styles ----------------- */
+/* --------------------------------------------------- */
 nav ul {
   list-style: none;
   display: flex;
@@ -143,8 +45,11 @@ nav ul li a:hover {
   color: #A0522D;
   border-bottom: 2px solid #A0522D;
 }
+/* End of NavBar.js */
 
-/* --- Social Media Bar Styles (SocialMediaBar.js) --- */
+/* --------------------------------------------------- */
+/* ------------ Social Media Bar Styles --------------- */
+/* --------------------------------------------------- */
 .social-media-bar {
   display: flex;
   justify-content: flex-start;
@@ -162,62 +67,139 @@ nav ul li a:hover {
   height: 24px;
   filter: brightness(0) invert(1); /* Makes icons white for contrast */
 }
+/* End of SocialMediaBar.js */
 
-/* --- Product Page Styles --- */
-
-/* Product container layout */
-.product-container {
+/* --------------------------------------------------- */
+/* ------------------ Home.js Styles ----------------- */
+/* --------------------------------------------------- */
+.HomePageGrid {
   display: flex;
-  flex-direction: column; /* Mobile: stack items vertically */
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping of elements */
-  
-  padding: 5px; /* Padding inside the container */
+  justify-content: center;
+  flex: 1;
+  padding: 5px;
 }
 
-/* Image and Video Gallery styling */
+.hero-text {
+  font-size: 5vw;
+  color: #333;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 8vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 5vw;
+}
+
+.hero-text button {
+  padding: 7px 30px;  /* Increase padding for a bigger button */
+  font-size: 20px;     /* Increase the text size */
+  background-color: #A0522D;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #fbc502;
+}
+
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.testimonial {
+  background-color: #FFF8DC;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+/* End of Home.js */
+
+/* --------------------------------------------------- */
+/* ------------------ Product.js Styles -------------- */
+/* --------------------------------------------------- */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
 .image-gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  box-sizing: border-box; /* Ensure padding is included in the size */
+  box-sizing: border-box;
 }
-
-/* Main image and video container */
-.main-image img, .video-container video {
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  max-width: 400px; /* Ensure the image/video doesn't exceed container width */
-  max-height: 400px; /* Ensure the image/video doesn't exceed container height */
-  object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
+.main-image {
   border-radius: 10px;
-  box-sizing: border-box; /* Include padding/borders in the element’s size */
 }
 
-/* Thumbnail gallery styling */
+.main-image img, .video-container video {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
 .thumbnail-gallery {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
   flex-wrap: wrap;
+  border-radius: 10px;
 }
 
-/* Thumbnails for images and videos */
 .thumbnail, .video-thumbnail {
   width: 80px;
   height: 80px;
   margin: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border-radius: 10px;
 }
 
 .thumbnail:hover, .video-thumbnail:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
 }
 
-/* Product details section */
 .product-details {
   padding: 0px;
   max-width: 500px;
@@ -225,218 +207,32 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box; /* Prevent overflow issues due to padding */
+  box-sizing: border-box;
 }
 
-/* Price display */
 .price {
   font-size: 24px;
   font-weight: bold;
   margin-top: 5px;
-}
-
-/* PayPal button styling */
-.paypal-button {
   align-items: center;
-  margin-top: 15px;
 }
-/* Product description */
-.description {
-  margin-top: 0px;
-}
+/* End of Product.js */
 
-.about-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.main-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.main-text {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-}
-
-.main-image {
-  flex: 1;
-  padding: 20px;
-  text-align: right;
-}
-
-.main-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* New How It Works Section */
-.howitworks {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.howitworks-item {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  background-color: #f9f9f9; /* Background color for distinction */
-  border-radius: 8px;
-}
-
-.howitworks-item img {
+/* --------------------------------------------------- */
+/* ------------------ About.js Styles -------------- */
+/* --------------------------------------------------- */
+/* How It Works Icons */
+.howitworks-icon {
   max-width: 100px;
   margin-bottom: 10px;
-  border-radius: 50%;
+  border-radius: 50%; /* Rounded icons */
 }
 
-.howitworks-item h3 {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
+/* End of About.js */
 
-.howitworks-item p {
-  font-size: 1em;
-  color: #666;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .main-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .main-text, .main-image {
-    flex: none;
-    padding: 0;
-  }
-
-  .howitworks {
-    flex-direction: column;
-  }
-
-  .howitworks-item {
-    margin-bottom: 20px;
-  }
-}
-
-
-/* --- Media Query for Mobile --- */
-
-/* Mobile layout adjustments for screens smaller than 768px */
-@media (max-width: 768px) {
-
-  .product-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items */
-    justify-content: center;
-  }
-
-  /* Ensure the image gallery takes full width on mobile */
-  .image-gallery {
-    width: 100%; /* Full width */
-    margin-top: 0; /* Remove any extra margin at the top */
-    max-width: 100%; /* Make sure it doesn't overflow */
-    height: auto; /* Adjust height automatically for content */
-  }
-
-  .main-image img, .video-container video {
-    width: 100%; /* Ensure image/video fits the container */
-    max-width: 100%; /* Prevent overflow */
-    height: auto; /* Adjust height based on content */
-    object-fit: contain; /* Maintain aspect ratio */
-  }
-
-  /* Ensure product details also take full width on mobile */
-  .product-details {
-    width: 100%; /* Full width */
-    max-width: 100%; /* Prevent overflow */
-    margin-top: 20px; /* Add some space between the gallery and details */
-    padding: 10px; /* Add padding for a better mobile experience */
-    text-align: center; /* Center text on mobile */
-  }
-
-  .price {
-    font-size: 20px; /* Reduce font size for mobile */
-  }
-
-  .description {
-    font-size: 16px; /* Reduce font size for mobile readability */
-    text-align: left;
-    
-  }
-}
-
-/* --- Desktop-specific media query --- */
-
-/* Desktop layout adjustments for screens larger than 768px */
-@media (min-width: 768px) {
-  .HomePageGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    padding: 0px;
-    align-items: flex-start;
-  }
-
-  .hero-text {
-    text-align: left;
-    font-size: 3vw;
-  }
-
-  .hero-image {
-    grid-column: 2 / 3;
-  }
-
-  .testimonials-section {
-    grid-column: 3 / 4;
-  }
-
-  .testimonials-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav ul {
-    justify-content: flex-start;
-    gap: 40px;
-  }
-
-.product-container {
-  display: flex;
-  flex-direction: row; /* Align the image gallery and details side by side */
-  align-items: flex-start; /* Align everything to the top */
-  justify-content: center;
-  margin: 0; /* Remove any unwanted margin */
-  padding: 0; /* Remove padding */
-  box-sizing: border-box; /* Ensure padding and border are included in the size */
-}
-
-.image-gallery {
-  flex: 1;
-  max-width: 400px;
-  min-height: 400px;
-  margin: 0; /* Ensure no extra margin */
-  padding: 0; /* Ensure no extra padding */
-  box-sizing: border-box;
-}
-
-.product-details {
-  flex: 1;
-  max-width: 500px;
-  padding-left: 20px; /* Space between gallery and details */
-  margin: 0; /* Ensure no top margin */
-  padding-top: 0; /* Remove any padding on top */
-  box-sizing: border-box;
-}
-
-}
+/* --------------------------------------------------- */
+/* ------------------ Contact.js Styles -------------- */
+/* --------------------------------------------------- */
 .contact-page {
   padding: 20px;
   text-align: center;
@@ -463,8 +259,9 @@ nav ul li a:hover {
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 15px 30px;  /* Increase padding for a bigger button */
+  font-size: 20px;     /* Increase the text size */
+  background-color: #A0522D;
   color: white;
   border: none;
   border-radius: 4px;
@@ -472,5 +269,52 @@ nav ul li a:hover {
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #fbc502;
 }
+
+/* End of Contact.js */
+
+/* --------------------------------------------------- */
+/* ------------- Desktop-specific media query -------- */
+/* --------------------------------------------------- */
+@media (min-width: 768px) {
+
+  /* Home.js */
+  .HomePageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 0px;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    text-align: left;
+    font-size: 3vw;
+  }
+
+  /* Product.js */
+  .product-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .image-gallery {
+    flex: 1;
+    max-width: 400px;
+    min-height: 400px;
+  }
+
+  .product-details {
+    flex: 1;
+    max-width: 500px;
+    padding-left: 20px;
+  }
+
+  /* Contact.js */
+  .contact-form {
+    max-width: 600px;
+  }
+}
+/* End of desktop-specific media query */

@@ -1,20 +1,14 @@
 import React from 'react';
-import '../App.css'; // Import CSS file
-import useDeviceType from '../useDeviceType.js';
+import '../App.css'; // Assuming you're using a separate CSS file for styles
 
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>© 2024 <a href ="http://www.theboxofrocks.com">theboxofrocks.com</a>. All rights reserved. 
+      The Box of Rocks LLC  Lakeville, MN</p>
+      
+    </footer>
+  );
+};
 
-const FooterBar = () => {
-    const deviceType = useDeviceType();  // Get device type ('Mobile' or 'Desktop')
-    return (
-            <div className='Footer'>
-                <p>theboxofrocks.com 2024
-                <br/>{deviceType} Version
-                </p>
-                
-            
-            </div>
-    ); 
-}; 
-
-
-export default FooterBar;
+export default Footer;

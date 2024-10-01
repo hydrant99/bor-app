@@ -1,53 +1,45 @@
 import React from 'react';
 import '../App.css';
 
-
 // Import images
-import orderImage from '../images/dogpaw.jpg';
+import orderImage from '../images/Product Images v4-6.png';
 import shipImage from '../images/weship.png';
 import laughImage from '../images/laugh.webp';
-import aboutImage from '../images/Product Images v4-6.png';
+
 
 const About = () => {
-  
-
   return (
     <div className="about-page">
-      {/* Main Section: Text on the left, Image on the right */}
-      <div className="main-section">
-        <div className="main-text">
-          <p>
-            Thanks for checking us out! <br/> 
-            http://www.theboxofrocks.com started out as a silly idea amongst friends! Now we can share the laughter across the U.S.! <br/>
-          </p>
-        </div>
-        <div className="main-image">
-          <img src={aboutImage} alt="About us"  />
-        </div>
-      </div>
+      <h1>About </h1>
+      <div className="MessageBox">We are a small shop located in Minnesota.  What started out as a joke amongst friends turned into a little project to deliver boxes of rocks around the United States.  </div>
 
       {/* How It Works */}
-      <h1>How it works: </h1>
-      
-      {/* Reusing the Testimonials Class for How It Works */}
-      <div className="testimonials-grid">
-        <div className="testimonial">
+      <h2>How it works: </h2>    
+      <div className="howitworks-grid">
+        <div className="howitworks-column">
           <img src={orderImage} alt="Order" className="howitworks-icon" />
-          <h3>You order</h3>
-          <p>We will pack up your rocks with 1 of four messages attached.</p>
+          <h4>you order</h4>
+       
         </div>
 
-        <div className="testimonial">
+        <div className="howitworks-column">
           <img src={shipImage} alt="Ship" className="howitworks-icon" />
-          <h3>We ship</h3>
-          <p>The box will come in a blue mailer with a shipping label.</p>
+          <h4>we ship</h4>
         </div>
 
-        <div className="testimonial">
+        <div className="howitworks-column">
           <img src={laughImage} alt="Laugh" className="howitworks-icon" />
-          <h3>They laugh</h3>
-          <p>Capture your friend's reaction and tag us on the socials lol.</p>
+          <h4>they laugh</h4>
         </div>
+      </div>
+     
+      
+      {/* Placeholder for map */}
+      
+      <div className="map-header"> who got rocked? </div>
+      
+      <div className="map-placeholder">
+        <p>Map of orders coming soon!</p>
       </div>
     </div>
   );

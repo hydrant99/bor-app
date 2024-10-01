@@ -73,6 +73,9 @@ const Contact = () => {
           Send Email
         </button>
       </form>
+
+    
+
     </div>
   );
 };

@@ -16,6 +16,41 @@ body, html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+}
+a {
+  color: white; /* Change default link color to white */
+  text-decoration: none; /* Optional: remove underline */
+}
+/* Basic styling for the footer */
+.footer {
+  width: 100%;
+  background-color: #A0522D;
+  color: #FFFFFF;
+  
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Ensures the main content takes up the remaining space */
+  padding: 20px;
 }
 
 /* --------------------------------------------------- */
@@ -23,7 +58,7 @@ body, html {
 /* --------------------------------------------------- */
 nav ul {
   list-style: none;
-  display: flex;
+  display: none;
   justify-content: space-around;
   padding: 10px;
   margin: 0;
@@ -45,6 +80,12 @@ nav ul li a:hover {
   color: #A0522D;
   border-bottom: 2px solid #A0522D;
 }
+
+.CustomHR {
+  display: none;
+}
+
+
 /* End of NavBar.js */
 
 /* --------------------------------------------------- */
@@ -57,17 +98,20 @@ nav ul li a:hover {
   align-items: center;
   padding: 0 20px; /* Adds padding on both sides */
   background-color: #A0522D; /* Brown background */
+  height: 60px; /* Set consistent height for the navbar */
 }
 
 .socialIcons {
   display: flex;
   gap: 15px; /* Space between social icons */
   margin-right: auto; /* Push social icons to the left */
+  
 }
 
 .waffleContainer {
   display: flex;
   justify-content: flex-end; /* Pushes the waffle icon to the right */
+  height: 100%;
 }
 
 .waffle-icon {
@@ -75,12 +119,14 @@ nav ul li a:hover {
   filter: brightness(0) invert(1); /* White for contrast */
   cursor: pointer;
   margin-left: 20px; /* Adds a little space between the icons and the waffle */
+  display: flex;
+  align-items: center; /* Vertically align waffle icon */
 }
 
 /* Dropdown menu styles */
 .dropdown-menu {
   position: absolute;
-  top: 50px;
+  top: 60px; /* Adjust to match the height of the nav bar */
   right: 20px;
   background-color: white;
   padding: 10px;
@@ -112,16 +158,12 @@ nav ul li a:hover {
   border-radius: 4px;
 }
 
-.socialIcons {
-  display: flex;
-  gap: 15px;
-  flex-grow: 1;
-}
-
 .iconStyle {
   width: 24px;
   height: 24px;
   filter: brightness(0) invert(1); /* Makes icons white for contrast */
+  display: flex;
+  align-items: center; /* Vertically align icons */
 }
 /* End of SocialMediaBar.js */
 
@@ -167,7 +209,6 @@ nav ul li a:hover {
   background-color: #fbc502;
 }
 
-
 .hero-image img {
   width: 100%;
   max-width: 400px;
@@ -212,6 +253,8 @@ nav ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   padding: 5px;
+  border-radius: 10px;
+  
 }
 
 .image-gallery {
@@ -220,9 +263,11 @@ nav ul li a:hover {
   align-items: center;
   border-radius: 10px;
   box-sizing: border-box;
+  background-color: #f9f5f5;
+  padding: 5px;
 }
-.main-image {
 
+.main-image {
   border-radius: 10px;
 }
 
@@ -265,6 +310,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .price {
@@ -272,57 +318,119 @@ nav ul li a:hover {
   font-weight: bold;
   margin-top: 5px;
   align-items: center;
+  border-radius: 10px;
 }
 /* End of Product.js */
 
 /* --------------------------------------------------- */
 /* ------------------ About.js Styles -------------- */
 /* --------------------------------------------------- */
-/* How It Works Icons */
+/* How It Works Section Styling */
+.howitworks-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px; /* Limit expansion to 1000px */
+  margin: 20px auto; /* Center the grid horizontally */
+  padding: 0 20px;
+}
+
+.howitworks-column {
+  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .howitworks-icon {
   max-width: 100px;
   margin-bottom: 10px;
   border-radius: 50%; /* Rounded icons */
 }
 
+/* Message Box Styling */
+.MessageBox {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f2ebcf;
+  text-align: center;
+  font-size: 18px;
+  color: #555555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 1000px; /* Limit the width */
+  margin: 20px auto; /* Center the box horizontally */
+}
+
+/* Map Header and Placeholder Styling */
+.map-header {
+  color: #555;
+  font-size: 24px;
+  text-align: left; /* Left-align the "Who got rocked?" text */
+  max-width: 1000px;
+  margin: 20px auto 0 auto; /* Center the header and add spacing */
+}
+
+.map-placeholder {
+  margin-top: 5px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 1000px; /* Limit the width */
+  margin: 0 auto; /* Center the map box */
+}
 /* End of About.js */
 
 /* --------------------------------------------------- */
 /* ------------------ Contact.js Styles -------------- */
 /* --------------------------------------------------- */
+/* Contact Page Styling */
 .contact-page {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
   display: block;
-  margin: 10px 0 5px;
+  margin: 15px 0 5px;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .contact-form button {
-  padding: 15px 30px;  /* Increase padding for a bigger button */
-  font-size: 20px;     /* Increase the text size */
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
   background-color: #A0522D;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -331,18 +439,66 @@ nav ul li a:hover {
 
 /* End of Contact.js */
 
+
+
+
+
 /* --------------------------------------------------- */
 /* ------------- Desktop-specific media query -------- */
 /* --------------------------------------------------- */
 @media (min-width: 768px) {
-
+  
   /* Home.js */
   .HomePageGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    padding: 0px;
+    padding: 10px;
     align-items: flex-start;
+  }
+
+  .hero-text {
+    font-size: 2vw;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 3vw;
+    padding: 10px;
+  }
+
+  .navBar {
+ 
+    height: 60px; /* Keep the same height for desktop */
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+  }
+  
+  
+    .CustomHR {
+      width: 100%;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  
+
+  .waffleContainer {
+    display: none; /* Hide waffle icon on desktop */
   }
 
   .hero-text {
@@ -373,5 +529,64 @@ nav ul li a:hover {
   .contact-form {
     max-width: 600px;
   }
+
+/* Keep the row layout on larger screens, but stop expanding at 1000px */
+.howitworks-grid {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-/* End of desktop-specific media query */
+
+.main-image {
+  max-width: 400px; /* Larger image for desktop view */
+  border-radius: 10px;
+}
+
+
+}
+
+/* Desktop-specific media query for large screens */
+@media (min-width: 1000px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .waffleContainer {
+    display: none;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.1s, border-bottom 0.1s;
+  }
+
+  nav ul li a:hover {
+    color: #A0522D;
+    border-bottom: 2px solid #A0522D;
+  }
+  .CustomHR {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+
+}

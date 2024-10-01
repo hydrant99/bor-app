@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav>
    
    <NavLinks /> {/* Use NavLinks component */}
-   <hr className="CustomHR" />
+  
     </nav>
    
   );

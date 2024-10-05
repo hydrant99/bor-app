@@ -2,9 +2,9 @@ import React from 'react';
 import '../App.css';
 
 // Import images
-import orderImage from '../images/Product Images v4-6.png';
+import orderImage from '../images/dogpaw.jpg';
 import shipImage from '../images/weship.png';
-import laughImage from '../images/laugh.webp';
+import laughImage from '../images/Product Images v4-6.png';
 
 
 const About = () => {

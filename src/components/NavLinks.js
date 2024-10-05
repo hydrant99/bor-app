@@ -27,8 +27,7 @@ const NavLinks = ({ closeMenu }) => {
         </li>
       </ul>
 
-      {/* Divider under the UL list */}
-      <hr className="CustomHR" />
+     
     </>
   );
 };

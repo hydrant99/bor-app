@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/Product';
-import SocialMediaBar from './components/SocialMediaBar';
 import Footer from './components/footer.js';
 import { Helmet } from 'react-helmet';  // Import Helmet
 
@@ -29,10 +28,7 @@ function App() {
 
       <Router>
         {/* Header for NavBar */}
-        <header> 
-          <div className="social-media-bar">
-            <SocialMediaBar />
-          </div>
+        <header>
           <NavBar />
         </header>
 

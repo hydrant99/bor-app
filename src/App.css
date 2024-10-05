@@ -59,10 +59,7 @@ main {
 nav ul {
   list-style: none;
   display: none;
-  justify-content: space-around;
-  padding: 10px;
-  margin: 0;
-  background-color: white;
+ 
 }
 
 nav ul li {
@@ -71,18 +68,20 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 18px;
   transition: color 0.1s, border-bottom 0.1s;
 }
 
 nav ul li a:hover {
-  color: #A0522D;
-  border-bottom: 2px solid #A0522D;
+  background-color: #fbc502;
+  color: #333;
 }
-
-.CustomHR {
-  display: none;
+/* Style for active link */
+.active-link {
+  text-decoration: underline;  /* Adds the underline */
+  text-decoration-color: white; /* Underline in white */
+  text-decoration-thickness: 2px;
 }
 
 
@@ -92,19 +91,62 @@ nav ul li a:hover {
 /* ------------ Social Media Bar Styles --------------- */
 /* --------------------------------------------------- */
 
+
+/* NavBar styles */
 .navBar {
   display: flex;
-  justify-content: space-between; /* Separates social icons and waffle */
-  align-items: center;
-  padding: 0 20px; /* Adds padding on both sides */
-  background-color: #A0522D; /* Brown background */
-  height: 60px; /* Set consistent height for the navbar */
+  justify-content: center; /* Space between the logo, nav links, and waffle */
+  background-color: #A0522D; /* Adjust the brownish color to match the design */
+   height: 60px;
+ 
+}
+.header{
+
+  display: flex;
+  justify-content: center; /* Space between the logo, nav links, and waffle */
+  background-color: #A0522D; /* Adjust the brownish color to match the design */
+  padding: 10px 20px;
+  height: 60px;
+}
+.nav-logo {
+ 
+}
+
+.logo-text {
+  text-decoration: none;
+  color: #ffffff; /* Adjust the text color */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.rocks-text {
+  letter-spacing: 2PX;
+}
+
+.highlighted-o {
+  color: #FFF8DC; /* Color for the 'O' */
+}
+
+.nav-links-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.waffleContainer {
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.waffle-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .socialIcons {
   display: flex;
   gap: 15px; /* Space between social icons */
-  margin-right: auto; /* Push social icons to the left */
   
 }
 
@@ -123,21 +165,25 @@ nav ul li a:hover {
   align-items: center; /* Vertically align waffle icon */
 }
 
-/* Dropdown menu styles */
+/* Dropdown menu */
 .dropdown-menu {
+  display: block;
   position: absolute;
-  top: 60px; /* Adjust to match the height of the nav bar */
-  right: 20px;
-  background-color: white;
+  top: 60px; /* Position it under the navbar */
+  right: 0;
+  background-color: #A0522D; /* Grayish-brown background */
+  width: 25%;
   padding: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  z-index: 100;
 }
 
 .dropdown-menu ul {
+  display: flex;
+  flex-direction: column; /* Stack the menu items vertically */
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .dropdown-menu ul li {
@@ -145,17 +191,18 @@ nav ul li a:hover {
 }
 
 .dropdown-menu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 5px 10px;
   display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #A0522D;
+  font-size: 18px;
+  border-radius: 4px;
 }
 
 .dropdown-menu ul li a:hover {
-  background-color: #A0522D;
-  color: white;
-  border-radius: 4px;
+  background-color: #fbc502;
+  color: #333;
 }
 
 .iconStyle {
@@ -440,9 +487,6 @@ nav ul li a:hover {
 /* End of Contact.js */
 
 
-
-
-
 /* --------------------------------------------------- */
 /* ------------- Desktop-specific media query -------- */
 /* --------------------------------------------------- */
@@ -476,27 +520,15 @@ nav ul li a:hover {
     padding: 10px;
   }
 
-  .navBar {
  
-    height: 60px; /* Keep the same height for desktop */
-  }
   nav ul {
-    list-style: none;
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    margin: 0;
-    background-color: white;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically */
+    flex-direction: row; /* Ensure the links are in a row */
+    background-color: #A0522D;
   }
   
-  
-    .CustomHR {
-      width: 100%;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-    }
-  
-
   .waffleContainer {
     display: none; /* Hide waffle icon on desktop */
   }
@@ -541,52 +573,5 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-
-}
-
-/* Desktop-specific media query for large screens */
-@media (min-width: 1000px) {
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .waffleContainer {
-    display: none;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 0 15px;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: color 0.1s, border-bottom 0.1s;
-  }
-
-  nav ul li a:hover {
-    color: #A0522D;
-    border-bottom: 2px solid #A0522D;
-  }
-  .CustomHR {
-    width: 100%;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-  }
 
 }

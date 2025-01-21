@@ -95,3 +95,10 @@ Find out more about deployment here:
 
 Build successful!
 Committing changes to GitHub...
+[main 6276193] Build completed at 2025-01-21 15:25:42
+ 3 files changed, 74 insertions(+), 2 deletions(-)
+To https://github.com/hydrant99/bor-app.git
+   75b4e0c..6276193  main -> main
+Changes pushed to GitHub!
+Sending success email...
+Deployment script completed successfully!

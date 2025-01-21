@@ -1,7 +1,14 @@
 #!/bin/bash
+#This is the deployment script for theboxofrocks.com
+#Jay Freeman 1/21/2025
+#ChatGPT Assisted development
+
 
 # Set log file
 LOG_FILE="deploy.log"
+
+# Clear the log file
+> $LOG_FILE
 
 # Navigate to project directory
 echo "Navigating to project directory..." | tee -a $LOG_FILE

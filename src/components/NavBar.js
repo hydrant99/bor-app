@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import NavLinks from './NavLinks'; // Import the shared NavLinks component
 import { Link } from 'react-router-dom'; // If using react-router
-import logo from '../images/lolo.png';
+import logo from '../images/BOR_Ticket-12.png';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // Manage the state of the menu

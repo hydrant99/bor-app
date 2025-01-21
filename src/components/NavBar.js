@@ -42,8 +42,9 @@ const NavBar = () => {
         
       </Link>
     </div>
-  
-  
+    <div className="logo-text"><br></br>
+    <a href="https://www.theboxofrocks.com">theboxofrocks.com</a>
+    </div>
 
       {/* Center-aligned NavLinks */}
       <div className="nav-links-center">

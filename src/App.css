@@ -115,6 +115,26 @@ nav ul li a:hover {
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
+/* App.css */
+
+/* Style for the container */
+.nav-logo {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  max-width: 200px; /* Optional: Limit max width for the container */
+}
+
+/* Style for the logo image */
+.logo-image {
+  width: 100px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50px; /* Optional: Limit height if needed */
+  object-fit: contain; /* Ensures the image fits within the bounds */
+}
+
+
+
 
 .rocks-text {
   letter-spacing: 2PX;

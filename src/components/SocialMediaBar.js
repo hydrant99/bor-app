@@ -25,7 +25,7 @@ const SocialMediaBar = () => {
         <a href="https://x.com/theboxofrocks" target="_blank" rel="noopener noreferrer" className="iconLink">
           <img src={twit} alt="Twitter" className="iconStyle" />
         </a>
-        <a href="https://www.pinterest.com/RockMaster2024/" target="_blank" rel="noopener noreferrer" className="iconLink">
+        <a href="https://www.pinterest.com/jConnector_/the-box-of-rocks/" target="_blank" rel="noopener noreferrer" className="iconLink">
           <img src={pin} alt="Pinterest" className="iconStyle" />
         </a>
       </div>

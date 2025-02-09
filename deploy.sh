@@ -39,6 +39,6 @@ fi
 
 # Step 3: Send success email
 echo "Sending success email..." | tee -a $LOG_FILE
-echo -e "Build and deployment successful at $timestamp\n\nLog file:\n$(cat $LOG_FILE)" | mail -s "React Deployment Successful" hydrant1@gmail.com
+echo -e "Build and deployment successful at $timestamp\n\nLog file:\n$(cat $LOG_FILE)" | mail -s "Box of Rocks React Deployment Successful" hydrant1@gmail.com
 
 echo "Deployment script completed successfully!" | tee -a $LOG_FILE

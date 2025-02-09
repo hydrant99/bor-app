@@ -21,9 +21,9 @@ Compiled successfully.
 
 File sizes after gzip:
 
-  63 kB (+14 B)  build/static/js/main.7758f85f.js
-  2.69 kB        build/static/js/488.a8f6b925.chunk.js
-  1.82 kB        build/static/css/main.a793b6ad.css
+  63 kB    build/static/js/main.7758f85f.js
+  2.69 kB  build/static/js/488.a8f6b925.chunk.js
+  1.82 kB  build/static/css/main.a793b6ad.css
 
 The project was built assuming it is hosted at /.
 You can control this with the homepage field in your package.json.
@@ -38,5 +38,10 @@ Find out more about deployment here:
 
   https://cra.link/deployment
 
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.1.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.1.0
+npm notice To update run: npm install -g npm@11.1.0
+npm notice
 Build successful!
 Committing changes to GitHub...

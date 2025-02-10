@@ -590,5 +590,38 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+.return-policy-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+
+
+.last-updated {
+  font-style: italic;
+  color: #666;
+}
+
+.policy-footer {
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+.return-policy-container h2 + p a {
+  color: blue;
+  font-weight: bold;
+}
+
+.return-policy-container h2 + p a:hover {
+  text-decoration: underline;
+}
 
 }

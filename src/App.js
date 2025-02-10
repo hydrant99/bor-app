@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import Product from './pages/Product';
 import Footer from './components/footer.js';
 import { Helmet } from 'react-helmet';  // Import Helmet
+import ReturnPolicy from "./components/returnPolicy.js";  // Import the Return Policy Page
+
 
 function App() {
   return (
@@ -39,12 +41,14 @@ function App() {
             <Route path="/product" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/return-policy" element={<ReturnPolicy />} />  {/* New Route */}
           </Routes>
         </main>
+          {/* Footer */}
+      <Footer />
       </Router>
 
-      {/* Footer */}
-      <Footer />
+    
     </div>
   );
 }
